@@ -71,10 +71,11 @@ struct BasicAnimationView: View {
             // .looping() — repeats indefinitely
             LottieView(animation: .named("heart"))
                 .playing()
+                .resizable()
                 .looping()
                 .frame(width: 300, height: 300)
             
-            Text("Confetti on loop")
+            Text("Heart on loop")
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
         }
@@ -101,6 +102,7 @@ struct PlaybackControlView: View {
             // Animation responds to playbackMode state changes
             LottieView(animation: .named("subscribe"))
                 .playbackMode(playbackMode)
+                .resizable()
                 .animationSpeed(speed)
                 .frame(width: 200, height: 200)
             
@@ -161,6 +163,7 @@ struct LikeButtonView: View {
             // Heart animation — tappable with forward/reverse toggle
             LottieView(animation: .named("heart"))
                 .playbackMode(playbackMode)
+                .resizable()
             // Pause when animation completes to hold final frame
                 .animationDidFinish { completed in
                     if completed {
@@ -240,6 +243,7 @@ struct FormSubmitView: View {
                     // Checkmark plays once then holds
                     LottieView(animation: .named("subscribe"))
                         .playbackMode(playbackMode)
+                        .resizable()
                         .animationDidFinish { completed in
                             if completed {
                                 // Hold 1 second then dismiss and reset
@@ -290,6 +294,7 @@ struct RemoteAnimationView: View {
                         url: URL(string: "REPLACE_WITH_YOUR_LOTTIEFILES_URL")!
                     )
                 }
+                .resizable()
                 .playing()
                 .looping()
             }
