@@ -1,39 +1,61 @@
+# 🎬 Lottie Animations — SwiftUI Demo
 
-# 🚀 Getting Started
+A SwiftUI demo showing how to integrate and control Lottie animations in an iOS app — including playback control, looping, and triggering animations from SwiftUI state.
 
-## 1. Clone the Repo
+---
+
+## 🤔 What this is
+
+This project shows how to embed Lottie (the industry-standard animation format from Airbnb) into a SwiftUI app. It includes three ready-to-run animations — a heart, a success checkmark, and a subscribe animation — with examples of how to trigger, loop, and control them from SwiftUI views.
+
+## ✅ Why you'd use it
+
+- **Copy-paste Lottie integration** — the bridge between Lottie's `UIView`-based player and SwiftUI is already wired up
+- **Three working animations included** — heart, success, and subscribe JSON files ready to run out of the box
+- **State-driven playback** — see how to trigger animations from SwiftUI `@State` (e.g. on button tap)
+- **No heavy setup** — one SPM package dependency and you're running
+
+## 📺 Watch on YouTube
+
+[![Watch on YouTube](https://img.shields.io/badge/YouTube-Watch%20the%20Tutorial-red?style=for-the-badge&logo=youtube)](https://youtu.be/m9LUur5MQ18)
+
+> This project was built for the [NoahDoesCoding YouTube channel](https://www.youtube.com/@NoahDoesCoding97). Subscribe for weekly SwiftUI tutorials.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repo
 ```bash
-git clone https://github.com/NDCSwift/REPO-NAME.git
-cd REPO-NAME
+git clone https://github.com/NDCSwift/SwiftUILottieDemo.git
+cd SwiftUILottieDemo
 ```
-Or select “Clone Git Repository…” when Xcode launches.
 
-⸻
+### 2. Open in Xcode
+Double-click `SwiftUILottieDemo.xcodeproj`.
 
-## 2. Open in Xcode
-	•	Double-click the .xcodeproj or .xcworkspace.
+### 3. Add Lottie via SPM
+**File → Add Package Dependencies** → search for `github.com/airbnb/lottie-spm`
 
-⸻
+### 4. Set Your Development Team
+**TARGET → Signing & Capabilities → Team**
 
-## 3. Set Your Development Team
+### 5. Update the Bundle Identifier
+Change `com.example.MyApp` to a unique identifier.
 
-In Xcode, navigate to:
+### 6. Run
+Select a simulator or device and hit **Run**.
 
-TARGET → Signing & Capabilities → Team
-	
-    •	Select your personal or organizational team.
+---
 
-⸻
+## 🛠️ Notes
 
-## 4. Update the Bundle Identifier
-	•	Change com.example.MyApp to a unique identifier (e.g., com.yourname.MyApp).
+- Lottie is added via Swift Package Manager — not included in the repo
+- Animation JSON files (`heart.json`, `success.json`, `subscribe.json`) are included in the project
+- If you see a code signing error, check that Team and Bundle ID are set
 
-⸻
+## 📦 Requirements
 
-🛠️ Notes
-
-	•	If you see a code signing error, check that Team and Bundle ID are set.
-	•	If building for a device, ensure your provisioning profile supports the required capabilities (Push, iCloud, etc.).
-
-📺 YouTube
-[Click here to check out the guide on YouTube](https://youtu.be/m9LUur5MQ18)
+- Xcode 15+
+- iOS 17+
+- [Lottie SPM](https://github.com/airbnb/lottie-spm)
